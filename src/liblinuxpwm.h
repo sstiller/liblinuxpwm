@@ -17,4 +17,5 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
+#include "linux-pwm-pin.h"
+#include "pwm-pin.h"

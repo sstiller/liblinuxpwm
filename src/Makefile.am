@@ -20,12 +20,12 @@ liblinuxpwm_la_LDFLAGS =
 liblinuxpwm_la_LIBADD = 
 
 
-
 include_HEADERS = \
-	liblinuxpwm.h
-	pwm-handler.h \
-	pwm-pin.h \ 
+	liblinuxpwm.h \
+	pwm-pin.h \
 	linux-pwm-pin.h 
+
+#	pwm-handler.h
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = liblinuxpwm.pc
