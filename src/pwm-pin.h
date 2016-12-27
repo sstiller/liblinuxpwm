@@ -27,14 +27,11 @@ class PwmPin
 {
 protected:
   PwmPin() = default;
-  
+public:  
   virtual void setPeriod(uint32_t newValue) = 0;
   virtual void setDutyCycle(uint32_t newValue) = 0;
   virtual void setEnabled(bool newEnabled = true) = 0;
   virtual bool isEnabled() const = 0;
-   
-private:
-   
 };
 
 #endif // _PWM_PIN_H_
