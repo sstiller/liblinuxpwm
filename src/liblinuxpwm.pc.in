@@ -10,4 +10,4 @@ Description: Sample library created by Anjuta project wizard.
 Version: @VERSION@
 Requires: 
 Libs: -L${libdir} -llinuxpwm
-Cflags: -I${includedir}
+Cflags: -std=c++11 -I${includedir}

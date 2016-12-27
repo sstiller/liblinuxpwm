@@ -1,11 +1,7 @@
 ## Process this file with automake to produce Makefile.in
 
-## Created by Anjuta
-
 AM_CPPFLAGS = \
-	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \
-	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
-	-DPACKAGE_DATA_DIR=\""$(pkgdatadir)"\"
+	-std=c++11
 
 AM_CFLAGS =\
 	 -Wall\
@@ -15,7 +11,9 @@ lib_LTLIBRARIES = liblinuxpwm.la
 
 
 liblinuxpwm_la_SOURCES = \
-	lib.c
+	pwm-handler.cpp \
+	pwm-pin.cpp \
+	linux-pwm-pin.cpp
 
 liblinuxpwm_la_LDFLAGS = 
 
@@ -25,6 +23,9 @@ liblinuxpwm_la_LIBADD =
 
 include_HEADERS = \
 	liblinuxpwm.h
+	pwm-handler.h \
+	pwm-pin.h \ 
+	linux-pwm-pin.h 
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = liblinuxpwm.pc

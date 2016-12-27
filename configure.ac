@@ -31,4 +31,5 @@ AC_OUTPUT([
 Makefile
 src/liblinuxpwm.pc
 src/Makefile
+test/Makefile
 ])

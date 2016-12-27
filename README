@@ -1,0 +1,84 @@
+
+sudo raspi-config --> i2c einschalten
+echo "pca9685" 0x70  | sudo tee /sys/devices/platform/soc/3f804000.i2c/i2c-1/new_device
+echo 0 | sudo tee /sys/class/pwm/pwmchip0/export
+echo 20000000 | sudo tee /sys/class/pwm/pwmchip0/pwm0/period
+
+echo 1000000 | sudo tee /sys/class/pwm/pwmchip0/pwm0/duty_cycle
+echo 1 | sudo tee /sys/class/pwm/pwmchip0/pwm0/enable 
+echo 2000000 | sudo tee duty_cycle
+
+
+PwmHandler
+==========
+Devices are detected automatically on start.
+
+/** Scan sysfs for existing PWM devices.
+  * switches off all handled pins
+  * Updates the internal device list.
+  */  
+void updateDevices();
+
+int getNumDevices() const;
+
+int = localPinId
+<int, std::shared_ptr<PwmPin> >
+
+std::map<uint8_t, std::shared_ptr<PwmDevice> > deviceMap;
+getDevices()
+
+PwmDevice TODO: REMOVE???
+=========
+
+// accessible by friend PwmHandler
+private: PwmDevice(uint8_t deviceId);
+
+std::map<uint8_t, std::shared_ptr<PwmPin> > pinMap;
+/** enable a pin of the device
+  * @param pinId the ID of the pin, first = 0
+  * @throws std::exception on error
+  */
+void enablePin(uint8_t pinId)
+
+/** disable a pin of the device.
+  * Errors are ignored.
+  * @param pinId the ID of the pin, first = 0
+  */
+void enablePin(uint8_t pinId)
+
+/** check if pin is enabled
+  * @ returns true if enabled, else false.
+  */
+bool isEnabled(uint8_t pinId)
+
+std::shared_ptr<PwmPin> getPin();
+
+
+PwmPin
+======
+/** Set the dutyCycle 
+  * newValue Value in nano seconds
+  */
+bool setDutyCycle(uint32_t newValue);
+
+/** Set the PWM period
+  * newValue Value in nano seconds
+  */
+bool setPwmPeriod(uint32_t newValue);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
