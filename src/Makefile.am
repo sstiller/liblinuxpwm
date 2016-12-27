@@ -13,7 +13,8 @@ lib_LTLIBRARIES = liblinuxpwm.la
 liblinuxpwm_la_SOURCES = \
 	pwm-handler.cpp \
 	pwm-pin.cpp \
-	linux-pwm-pin.cpp
+	linux-pwm-pin.cpp \
+	virtual-pwm-pin.cpp
 
 liblinuxpwm_la_LDFLAGS = 
 
@@ -23,7 +24,8 @@ liblinuxpwm_la_LIBADD =
 include_HEADERS = \
 	liblinuxpwm.h \
 	pwm-pin.h \
-	linux-pwm-pin.h 
+	linux-pwm-pin.h \
+	virtual-pwm-pin.h 
 
 #	pwm-handler.h
 
