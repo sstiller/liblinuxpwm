@@ -3,7 +3,7 @@
 AM_CPPFLAGS = \
 	-std=c++11
 
-bin_PROGRAMS =  \
+noinst_PROGRAMS =  \
 	linuxpwmtest
 
 linuxpwmtest_SOURCES =  \
