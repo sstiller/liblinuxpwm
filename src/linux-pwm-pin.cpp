@@ -18,7 +18,6 @@
  */
 
 // C
-#include <string.h> // memcpy
 #include <cerrno>
 #include <sys/stat.h>
 #include <unistd.h> // usleep
