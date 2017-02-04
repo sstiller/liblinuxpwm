@@ -1,4 +1,4 @@
-/* -*- Mode: C; indent-tabs-mode: nil; c-basic-offset: 2; tab-width: 2 -*-  */
+/* -*- Mode: C++; indent-tabs-mode: nil; c-basic-offset: 2; tab-width: 2 -*-  */
 /*
  * pwm-handler.h
  * Copyright (C) 2016 Sandro Stiller <sandro@sagichnicht.de>
