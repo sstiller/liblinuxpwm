@@ -17,7 +17,7 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-//stl
+//std
 #include <iostream>
 
 // local includes

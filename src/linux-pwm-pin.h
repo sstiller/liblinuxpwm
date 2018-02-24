@@ -20,7 +20,7 @@
 #ifndef _LINUX_PWM_PIN_H_
 #define _LINUX_PWM_PIN_H_
 
-// stl
+// std
 #include <string>
 #include <cstdio>
 
