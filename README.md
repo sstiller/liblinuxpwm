@@ -8,6 +8,7 @@ You can use this library to
 * control RC servos or speed controllers
 * set the brightness and colour of connected LEDs
 * Play music by setting the frequency (and duty cycle to 50 % every time). Works pretty good.
+
 Currently this library only supports PWM pins with a PWM driver connected to it.
 
 I mainly use it for controlling a tracked vehicle with a RaspberryPi.
