@@ -22,7 +22,7 @@
 #include <sys/stat.h>
 #include <unistd.h> // usleep
 
-// stl
+// std
 #include <iostream>
 #include <system_error>
 
@@ -151,12 +151,15 @@ void LinuxPwmPin::setExported(bool exported)
   }
   fclose(exportFile);
 
-  // wait some time for directory creation
-  usleep(100000);
-  
-  if(! directoryExists(pinPath))
+  if(! exported)
   {
-    std::runtime_error("Directory for pin not existing");
+    // wait some time for directory creation
+    usleep(100000);
+
+    if(! directoryExists(pinPath))
+    {
+      std::runtime_error("Directory for pin not existing");
+    }
   }
 }
 
